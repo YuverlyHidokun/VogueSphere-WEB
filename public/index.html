@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VogueSphere</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Incluir A-Frame y AR.js -->
+    <!-- Incluir A-Frame (sin AR.js para evitar la cámara) -->
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/jeromeetienne/AR.js/aframe/build/aframe-ar.js"></script>
 </head>
 <body>
     <header>
@@ -23,33 +22,29 @@
     
     <section id="home">
         <h2>Bienvenido a VogueSphere</h2>
-        <p>Explora nuestros productos en 3D y experimenta la realidad aumentada.</p>
+        <p>Explora nuestros productos en 3D.</p>
     </section>
     
     <section id="products">
         <h2>Nuestros Productos</h2>
         <div class="product-list">
-            <div class="product" onclick="mostrarModeloAR('modelo1.glb')">
-                <img src="prenda1.jpg" alt="Prenda 1">
+            <div class="product" onclick="mostrarModelo('models/Falda azul.glb')">
+                <img src="images/falda.png" alt="Prenda 1">
                 <p>Prenda 1</p>
             </div>
-            <div class="product" onclick="mostrarModeloAR('modelo2.glb')">
-                <img src="prenda2.jpg" alt="Prenda 2">
+            <div class="product" onclick="mostrarModelo('models/modelo2.glb')">
+                <img src="images/prenda2.jpg" alt="Prenda 2">
                 <p>Prenda 2</p>
             </div>
-            <!-- Agregar más productos aquí -->
         </div>
     </section>
     
-    <!-- Contenedor para la vista AR -->
-    <section id="ar-view" style="display: none;">
-        <h2>Vista en AR</h2>
-        <button onclick="cerrarAR()">Cerrar</button>
-        <a-scene embedded arjs>
-            <a-marker preset="hiro">
-                <a-entity id="ar-model" gltf-model="" scale="0.5 0.5 0.5"></a-entity>
-            </a-marker>
-            <a-camera></a-camera>
+    <!-- Contenedor para mostrar el modelo 3D sin cámara -->
+    <section id="model-view" style="display: none;">
+        <h2>Vista del Modelo</h2>
+        <button onclick="cerrarModelo()">Cerrar</button>
+        <a-scene embedded>
+            <a-entity id="model-3d" gltf-model="" position="0 0 -3" scale="1 1 1"></a-entity>
         </a-scene>
     </section>
     
@@ -61,7 +56,7 @@
     <footer>
         <p>&copy; 2025 Tecnology.com - Todos los derechos reservados.</p>
     </footer>
-    
+
     <script src="script.js"></script>
 </body>
 </html>
