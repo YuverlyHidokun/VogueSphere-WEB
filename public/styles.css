@@ -1,3 +1,4 @@
+/* Estilos generales */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #1E1E2F;
@@ -7,6 +8,7 @@ body {
     line-height: 1.6;
 }
 
+/* Encabezado */
 header {
     background-color: #3D0066;
     padding: 20px;
@@ -14,6 +16,7 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+/* Barra de navegación */
 nav {
     position: fixed;
     top: 0;
@@ -47,6 +50,7 @@ nav ul li a:hover {
     color: #FFC107;
 }
 
+/* Secciones */
 section {
     padding: 60px 20px;
     text-align: center;
@@ -57,11 +61,77 @@ section {
     padding: 50px;
 }
 
+/* Sección de contacto */
 #contact {
     background-color: #D84315;
     padding: 50px;
+    text-align: center;
 }
 
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.contact-info {
+    max-width: 400px;
+    text-align: left;
+}
+
+.contact-info h3 {
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Formulario de contacto */
+.contact-form {
+    max-width: 400px;
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background: #3D0066;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background: #5A0080;
+}
+
+/* Pie de página */
 footer {
     background-color: #3D0066;
     text-align: center;
@@ -70,6 +140,7 @@ footer {
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
 }
 
+/* Estilos para productos */
 .product-list {
     display: flex;
     flex-wrap: wrap;
