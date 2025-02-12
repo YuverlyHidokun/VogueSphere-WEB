@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VogueSphere</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Incluir A-Frame (sin AR.js para evitar la cámara) -->
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
 </head>
 <body>
@@ -29,17 +28,17 @@
         <h2>Nuestros Productos</h2>
         <div class="product-list">
             <div class="product" onclick="mostrarModelo('models/Falda azul.glb')">
-                <img src="images/falda.png" alt="Prenda 1">
+                <img src="images/Falda Azul.png" alt="Prenda 1">
                 <p>Prenda 1</p>
             </div>
-            <div class="product" onclick="mostrarModelo('models/modelo2.glb')">
-                <img src="images/prenda2.jpg" alt="Prenda 2">
+            <div class="product" onclick="mostrarModelo('models/sueter verde.glb')">
+                <img src="images/Sueter Verde.jpg" alt="Prenda 2">
                 <p>Prenda 2</p>
             </div>
         </div>
     </section>
     
-    <!-- Contenedor para mostrar el modelo 3D sin cámara -->
+    <!-- Contenedor para mostrar el modelo 3D -->
     <section id="model-view" style="display: none;">
         <h2>Vista del Modelo</h2>
         <button onclick="cerrarModelo()">Cerrar</button>
@@ -58,15 +57,16 @@
                 <p><strong>Email:</strong> contacto@tecnology.com</p>
                 <p><strong>Dirección:</strong> La Ecuatoriana, QUITO</p>
             </div>
-            <img src="images/contacto.jpg" alt="Contacto" class="contact-img">
+            <img src="images/Contacto.png" alt="Contacto" class="contact-img">
             <div class="contact-form">
                 <h3>Envíanos un mensaje</h3>
-                <form>
-                    <input type="text" name="name" placeholder="Tu nombre" required>
-                    <input type="email" name="email" placeholder="Tu correo" required>
-                    <textarea name="message" rows="4" placeholder="Tu mensaje" required></textarea>
+                <form id="contact-form">
+                    <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                    <input type="email" id="email" name="email" placeholder="Tu correo" required>
+                    <textarea id="message" name="message" rows="4" placeholder="Tu mensaje" required></textarea>
                     <button type="submit">Enviar</button>
                 </form>
+                <p id="response-message"></p>
             </div>
         </div>
     </section>
