@@ -160,3 +160,60 @@ footer {
 .product:hover {
     transform: scale(1.05);
 }
+
+.product {
+    background: #fff;
+    color: #000;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    text-align: center;
+    width: 200px;
+    position: relative;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product-name {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.product-price {
+    color: #27ae60;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.cart-btn {
+    background: #3D0066;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+}
+
+.cart-btn:hover {
+    background: #FFC107;
+    color: black;
+}
+
+.cart-btn i {
+    font-size: 16px;
+}

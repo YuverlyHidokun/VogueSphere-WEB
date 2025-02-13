@@ -65,6 +65,3 @@ app.post("/send-email", (req, res) => {
             res.status(500).json({ message: "Error al enviar el mensaje." });
         });
 });
-
-console.log("EMAIL_USER:", process.env.EMAIL_USER); // Para verificar que se está leyendo bien
-console.log("EMAIL_PASS:", process.env.EMAIL_PASS);
