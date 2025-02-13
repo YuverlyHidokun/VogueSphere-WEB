@@ -16,6 +16,68 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+/* Inicio */
+#home {
+    position: relative;
+    height: 100vh; /* Hace que ocupe toda la pantalla */
+    background: url('images/background-home.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.home-content {
+    background: rgba(0, 0, 0, 0.6); /* Oscurece el fondo para mejorar visibilidad */
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 600px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.home-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.home-content span {
+    color: #FFC107; /* Resalta la marca */
+}
+
+.home-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background: #FFC107;
+    color: black;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: background 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background: #FFA000;
+    color: white;
+}
+
+/* Animación de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 /* Barra de navegación */
 nav {
     position: fixed;
