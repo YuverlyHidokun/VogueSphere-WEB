@@ -150,11 +150,11 @@
         <div class="model-container">
             <h2>Vista del Modelo</h2>
             <a-scene embedded>
+                <a-sky color="#CCCCCC"></a-sky>  <!-- Esto añade un fondo blanco -->
                 <a-entity id="model-3d" gltf-model="" position="0 0 -3" scale="1 1 1"></a-entity>
             </a-scene>
             <div class="buttons-container">
                 <button class="model-btn vr-btn" onclick="cerrarModelo()">Cerrar</button>
-                <button class="model-btn ar-btn">Ver en AR</button>
             </div>
         </div>
     </section>
