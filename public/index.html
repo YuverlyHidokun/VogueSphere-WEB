@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VogueSphere</title>
+    <title>Q STORE</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>VogueSphere</h1>
+        <h1>Q STORE</h1>
         <nav>
             <ul>
                 <li><a href="#home">Inicio</a></li>
@@ -22,7 +22,7 @@
     
     <section id="home">
         <div class="home-content">
-            <h2>Bienvenido a <span>VogueSphere</span></h2>
+            <h2>Bienvenido a <span>Q STORE</span></h2>
             <p>Descubre la moda del futuro con modelos en 3D y realidad aumentada.</p>
             <a href="#products" class="cta-button">Explorar Productos</a>
         </div>
@@ -147,11 +147,16 @@
     
     <!-- Contenedor para mostrar el modelo 3D -->
     <section id="model-view" style="display: none;">
-        <h2>Vista del Modelo</h2>
-        <button onclick="cerrarModelo()">Cerrar</button>
-        <a-scene embedded>
-            <a-entity id="model-3d" gltf-model="" position="0 0 -3" scale="1 1 1"></a-entity>
-        </a-scene>
+        <div class="model-container">
+            <h2>Vista del Modelo</h2>
+            <a-scene embedded>
+                <a-entity id="model-3d" gltf-model="" position="0 0 -3" scale="1 1 1"></a-entity>
+            </a-scene>
+            <div class="buttons-container">
+                <button class="model-btn vr-btn" onclick="cerrarModelo()">Cerrar</button>
+                <button class="model-btn ar-btn">Ver en AR</button>
+            </div>
+        </div>
     </section>
     
     <section id="contact">
